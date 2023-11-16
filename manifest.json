@@ -1,9 +1,9 @@
 {
-  "description": "This extension adds Bulk funcitonality to the HangarXPLOR extension",
-  "manifest_version": 2,
-  "name": "Star Citizen Bulk XPLORer",
+  "description": "This extension adds Bulk funcitonality to the HangarXPLOR extension. Patched by Joppie to work again.",
+  "manifest_version": 3,
+  "name": "Star Citizen Bulk XPLORer, Patched by Joppie",
   "short_name": "BulkXPLOR",
-  "version": "2.42",
+  "version": "2.44",
   
   "author": "/u/alluran (Peter Dolkens)",
   
