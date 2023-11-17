@@ -1,6 +1,6 @@
 {
   "description": "This extension adds Bulk funcitonality to the HangarXPLOR extension",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Star Citizen Bulk XPLORer",
   "short_name": "BulkXPLOR",
   "version": "2.44",
