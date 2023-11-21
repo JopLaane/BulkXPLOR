@@ -5,7 +5,9 @@ HangarXPLOR.BulkEnabled = true;
 
 HangarXPLOR._callbacks = HangarXPLOR._callbacks || {};
 
-HangarXPLOR._callbacks.Gift = function (e) { window.alert('Coming Soon') }
+HangarXPLOR._callbacks.Gift = function (e) {
+    window.alert('Coming Soon')
+}
 
 HangarXPLOR._callbacks.GiftConfirm = function (e) { window.alert('Coming Soon') }
 
@@ -42,6 +44,7 @@ HangarXPLOR._callbacks.MeltConfirm = function (e) {
     var errors = '';
 
     $('#reclaim .panes').hide();
+    $('#reclaim form[name=reclaim-bulk]').css({'overflow':'auto', "max-height":"500px"});
 
     meltNext();
 
@@ -60,8 +63,10 @@ HangarXPLOR._callbacks.MeltConfirm = function (e) {
                 if (result.success) {
                     totalSuccess++;
                     totalMelt += pledge.melt_value;
+                    
                     console.log(`Succesfull melted ${pledge.pledge_name}. %cAdded ${pledge.melt_value} to your ledger!`, "color:green; font-size:16px");
                     melted += '<li>' + pledge.pledge_name + ' - ' + pledge.melt_value + '</li>';
+                    
                 } else {
                     totalError++;
                     errors += '<li>' + pledge.pledge_name + ' - ' + result.msg + '</li>';

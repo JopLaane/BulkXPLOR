@@ -1,26 +1,34 @@
 {
-  "description": "This extension adds Bulk funcitonality to the HangarXPLOR extension",
-  "manifest_version": 2,
-  "name": "Star Citizen Bulk XPLORer",
+  "description": "This extension adds Bulk funcitonality to the HangarXPLOR extension. Patched by Joppie to work again.",
+  "manifest_version": 3,
+  "name": "Star Citizen Bulk XPLORer, Patched by Joppie",
   "short_name": "BulkXPLOR",
-  "version": "2.44",
-  
+  "version": "2.47",
+
   "author": "/u/alluran (Peter Dolkens)",
-  
-  "permissions": [ "https://robertsspaceindustries.com/*" ],
-  
+
+  "host_permissions": [ "https://robertsspaceindustries.com/*" ],
+
   "icons": {
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-             
-  "content_scripts": [{
-    "matches": ["https://robertsspaceindustries.com/account/pledges*"],
-    "js": ["content_scripts/loader.js"],
-    "run_at": "document_end"
-  }],
+
+  "content_scripts": [
+    {
+      "matches": [ "https://robertsspaceindustries.com/account/pledges*" ],
+      "js": [ "content_scripts/loader.js" ],
+      "run_at": "document_end"
+    }
+  ],
+
   "web_accessible_resources": [
-    "web_resources/HangarXPLOR.BulkUI.js",
-    "web_resources/HangarXPLOR.ReclaimBulk.html"
+    {
+      "resources": [
+        "/web_resources/HangarXPLOR.BulkUI.js",
+        "/web_resources/HangarXPLOR.ReclaimBulk.html"
+      ],
+      "matches": [ "https://robertsspaceindustries.com/*" ]
+    }
   ]
 }
